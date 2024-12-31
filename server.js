@@ -5,6 +5,7 @@ const dotenv = require('dotenv');
 
 // Import routes
 const authRoutes = require('./routes/auth');
+const storyRoutes = require('./routes/stories');
 
 dotenv.config();
 
@@ -31,6 +32,7 @@ app.get('/health', (req, res) => {
 
 // Routes
 app.use('/api/auth', authRoutes);
+app.use('/api/stories', storyRoutes);
 
 // Basic route
 app.get('/', (req, res) => {
